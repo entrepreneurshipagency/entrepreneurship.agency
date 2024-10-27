@@ -14,6 +14,25 @@
             text-align: center;
         }
 
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #3b78c4;
+            padding: 10px 0;
+        }
+
+        .tabs a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .tabs a:hover {
+            color: #ff6b6b;
+        }
+
         .hero-section {
             display: flex;
             flex-direction: column;
@@ -23,6 +42,17 @@
             padding: 20px;
             background: linear-gradient(135deg, #4a90e2, #6a11cb);
             position: relative;
+        }
+
+        .form-section-visible {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
@@ -122,40 +152,48 @@
         button:hover {
             background-color: #3b78c4;
         }
-
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #3b78c4;
-            padding: 10px 0;
-        }
-
-        .tabs a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .tabs a:hover {
-            color: #ff6b6b;
-        }
-
-        .form-section-visible {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        }
     </style>
 </head>
 <body>
-    <noscript>
-        <div style="background: #4a90e2; color: #fff; padding: 20px;">
-            <h1>Teach Your Kids Entrepreneurship</h1>
-            <h2>By Ivy League Graduates at Harvard and MIT</h
+    <div class="tabs">
+        <a href="#about">About Us</a>
+        <a href="#form">Book a Demo</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="hero-section">
+        <div class="form-section-visible">
+            <h3>Book a Demo</h3>
+            <div class="form-container">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                    <textarea name="message" rows="4" placeholder="Any Specific Requirements"></textarea>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+        <h1>Teach Your Kids Entrepreneurship</h1>
+        <h2>We are experts at Harvard Innovation Lab and MIT Martin Trust Center for Entrepreneurship. We will teach your child entrepreneurship whether in high school or college.</h2>
+    </div>
+
+    <div id="about" class="about-section">
+        <h3>About the Program</h3>
+        <p>We provide a unique learning experience for your children, crafted by some of the brightest minds from Harvard and MIT. This program aims to instill a strong entrepreneurial spirit in young minds by introducing them to creative thinking, problem-solving, and leadership skills. Whether your child is interested in starting their own business, learning the basics of finance, or simply exploring new ideas, our program will give them the foundation they need to excel.</p>
+    </div>
+
+    <div id="form" class="form-section">
+        <h3>Book a Demo</h3>
+        <div class="form-container">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" rows="4" placeholder="Any Specific Requirements"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
