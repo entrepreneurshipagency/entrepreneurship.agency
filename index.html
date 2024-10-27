@@ -72,6 +72,47 @@
             font-size: 1.1em;
             line-height: 1.6;
         }
+
+        .form-section {
+            background: #f4f4f4;
+            color: #333;
+            padding: 50px;
+        }
+
+        .form-section h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea, button {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3b78c4;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +126,7 @@
     
     <div class="hero-section">
         <h1>Teach Your Kids Entrepreneurship</h1>
-        <h2>By Ivy League Graduates at Harvard and MIT</h2>
+        <h2>By Harvard and MIT Experts</h2>
         <div class="call-to-action">
             <a href="#about" class="btn">Learn More</a>
         </div>
@@ -94,6 +135,19 @@
     <div id="about" class="about-section">
         <h3>About the Program</h3>
         <p>We provide a unique learning experience for your children, crafted by some of the brightest minds from Harvard and MIT. This program aims to instill a strong entrepreneurial spirit in young minds by introducing them to creative thinking, problem-solving, and leadership skills. Whether your child is interested in starting their own business, learning the basics of finance, or simply exploring new ideas, our program will give them the foundation they need to excel.</p>
+    </div>
+
+    <div id="form" class="form-section">
+        <h3>Book a Demo</h3>
+        <div class="form-container">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" rows="4" placeholder="Any Specific Requirements"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
